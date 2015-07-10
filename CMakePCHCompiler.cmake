@@ -118,12 +118,12 @@ function(target_precompiled_header) # target [...] header
 			list(APPEND CMAKE_PCH_COMPILER_TARGETS ${target})
 			set(CMAKE_PCH_COMPILER_TARGETS
 				"${CMAKE_PCH_COMPILER_TARGETS}"
-				PARENT_SCOPE
+				CACHE STRING "Target for pch"
 				)
 			list(APPEND CMAKE_PCH_COMPILER_TARGET_FLAGS ${flags})
 			set(CMAKE_PCH_COMPILER_TARGET_FLAGS
 				"${CMAKE_PCH_COMPILER_TARGET_FLAGS}"
-				PARENT_SCOPE
+				CACHE STRING "Flags for target for pch"
 				)
 		endif()
 	endforeach()
